@@ -1,5 +1,10 @@
 package br.univel.duelo;
 
+import br.univel.duelo.pistoleiro.Pistoleiro;
+import br.univel.duelo.pistoleiro.PistoleiroFactory;
+import br.univel.duelo.pistoleiro.TipoPistoleiro;
+import br.univel.duelo.pistoleiro.brasil.BrasilPistoleiroFactory;
+
 /**
  * Inicia um duelo entre os pistoleiros
  * 
@@ -9,9 +14,13 @@ package br.univel.duelo;
 public class Duelo {
 
 	public static void main(String[] args) {
+		new Duelo().duelar(new BrasilPistoleiroFactory());
+	}
+
+	public void duelar(final PistoleiroFactory factory) {
 		// Instância dois pistoleiro para duelar
-		Pistoleiro tripaSeca = new Pistoleiro("Tripa Seca");
-		Pistoleiro rachaCuca = new Pistoleiro("Racha cuca");
+		Pistoleiro tripaSeca = factory.create(TipoPistoleiro.DENTRO_DA_LEI, "Tripa Seca");
+		Pistoleiro rachaCuca = factory.create(TipoPistoleiro.FORA_DA_LEI, "Racha cuca");
 
 		// Enquando os dois estiverem vivos o duelo continua
 		while (tripaSeca.estaVivo() && rachaCuca.estaVivo()) {
@@ -32,6 +41,6 @@ public class Duelo {
 			// Se entrar no else é porque não houve ganhador
 			System.out.println("Não houve vencedor do duelo");
 		}
-
 	}
+
 }
