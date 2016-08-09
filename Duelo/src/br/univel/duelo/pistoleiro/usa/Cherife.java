@@ -1,43 +1,19 @@
 package br.univel.duelo.pistoleiro.usa;
 
-import java.util.Random;
-
+import br.univel.duelo.pistoleiro.AbstractPistoleiro;
 import br.univel.duelo.pistoleiro.Pistoleiro;
 
 /**
- * Pistoleiro dentro da lei americano
+ * Representa um pistoleiro no nosso joguinho com as ações básicas deste, sendo
+ * atirar e defender tiro
  * 
  * @author Will
  *
  */
-class Cherife implements Pistoleiro {
-
-	private final String nome;
-	private float vida = 100;
+class Cherife extends AbstractPistoleiro implements Pistoleiro {
 
 	protected Cherife(final String nome) {
-		this.nome = nome;
-	}
-
-	@Override
-	public String getNome() {
-		return this.nome;
-	}
-
-	@Override
-	public Float atirar() {
-		return new Random().nextFloat() * 100;
-	}
-
-	@Override
-	public Cherife defenderTiro(final Float tiro) {
-		this.vida -= tiro;
-		return this;
-	}
-
-	@Override
-	public Boolean estaVivo() {
-		return this.vida > 0;
+		super(nome, 100F, 7F);
 	}
 
 }
