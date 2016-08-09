@@ -1,7 +1,6 @@
 package br.univel.duelo.pistoleiro.brasil;
 
-import java.util.Random;
-
+import br.univel.duelo.pistoleiro.AbstractPistoleiro;
 import br.univel.duelo.pistoleiro.Pistoleiro;
 
 /**
@@ -11,34 +10,10 @@ import br.univel.duelo.pistoleiro.Pistoleiro;
  * @author Will
  *
  */
-class Cangaceiro implements Pistoleiro {
-
-	private final String nome;
-	private float vida = 80;
+class Cangaceiro extends AbstractPistoleiro implements Pistoleiro {
 
 	protected Cangaceiro(final String nome) {
-		this.nome = nome;
-	}
-
-	@Override
-	public String getNome() {
-		return this.nome;
-	}
-
-	@Override
-	public Float atirar() {
-		return new Random().nextFloat() * 80;
-	}
-
-	@Override
-	public Cangaceiro defenderTiro(final Float tiro) {
-		this.vida -= tiro;
-		return this;
-	}
-
-	@Override
-	public Boolean estaVivo() {
-		return this.vida > 0;
+		super(nome, 80F, 5F);
 	}
 
 }
