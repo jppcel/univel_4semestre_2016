@@ -1,4 +1,4 @@
-package br.univel.patterns.abstractfactory.pizza;
+package br.univel.patterns.abstractfactory;
 
 public interface Pizza {
 

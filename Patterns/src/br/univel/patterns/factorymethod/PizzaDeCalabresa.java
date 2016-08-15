@@ -1,9 +1,16 @@
 package br.univel.patterns.factorymethod;
 
-class PizzaDeCalabresa extends AbstractPizza implements Pizza {
+class PizzaDeCalabresa implements Pizza {
 
-	PizzaDeCalabresa(String nome) {
-		super(nome);
+	private final String nome;
+
+	PizzaDeCalabresa(final String nome) {
+		this.nome = nome;
+	}
+
+	@Override
+	public String getNome() {
+		return this.nome;
 	}
 
 	public TipoPizza getTipo() {
