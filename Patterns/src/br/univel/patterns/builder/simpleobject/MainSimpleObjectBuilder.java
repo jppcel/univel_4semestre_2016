@@ -7,7 +7,7 @@ public class MainSimpleObjectBuilder {
 		new Pessoa("Santos", "Will", "000", "000", null, null, null, null);
 		// Com builder
 		final PessoaBuilder builder = new PessoaBuilder();
-		builder.setNome("Will").setSobrenome("Santos").setCpf("000").setRg("000");
-		
+		builder.setSobrenome("Santos").setNome("Will").setCpf("000").setRg("000");
+		builder.build();
 	}
 }
