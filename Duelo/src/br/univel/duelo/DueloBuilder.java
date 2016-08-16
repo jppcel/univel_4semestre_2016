@@ -88,6 +88,8 @@ public class DueloBuilder {
 		final Arma arma2 = this.armaFactory.create(TipoArma.LONGA);
 		arma1.recarregar(this.lojaMunicao.venda(10));
 		arma2.recarregar(this.lojaMunicao.venda(10));
+		arma1.adicionarObservador(pistoleiro1);
+		arma2.adicionarObservador(pistoleiro2);
 		pistoleiro1.setArma(arma1);
 		pistoleiro2.setArma(arma2);
 		return new Duelo(pistoleiro1, pistoleiro2);

@@ -8,7 +8,9 @@ public interface Arma {
 
 	Float precisaoTiro();
 
-	Arma recarregar(Integer municoes);
+	Arma recarregar(final Integer municoes);
 
 	Boolean temMunicoes();
+	
+	void adicionarObservador(final ArmaObservador observador);
 }

@@ -45,4 +45,12 @@ public abstract class AbstractPistoleiro implements Pistoleiro {
 	public String getNome() {
 		return this.nome;
 	}
+
+	@Override
+	public void armaAtualizada(final Arma arma) {
+		if (!arma.temMunicoes()) {
+			arma.recarregar(5);
+			System.out.println("Arma sem municao recarregando");
+		}
+	}
 }

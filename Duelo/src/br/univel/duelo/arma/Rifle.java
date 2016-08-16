@@ -1,17 +1,33 @@
 package br.univel.duelo.arma;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Rifle implements Arma {
 
 	private Integer municoes = 0;
+	private final List<ArmaObservador> observadores = new ArrayList<>();
+
+	@Override
+	public void adicionarObservador(final ArmaObservador observador) {
+		this.observadores.add(observador);
+	}
+
+	protected void notificaObservadores() {
+		this.observadores.forEach(observador -> observador.armaAtualizada(this));
+	}
 
 	@Override
 	public Float atirar() {
+		Float tiro = 0F;
 		if (temMunicoes()) {
 			this.municoes--;
-			return potenciaTiro() * precisaoTiro();
+			tiro = potenciaTiro() * precisaoTiro();
+		} else {
+			System.out.println("Arma sem municao, recarregue");
 		}
-		System.out.println("Arma sem municao, regarregue");
-		return 0F;
+		notificaObservadores();
+		return tiro;
 	}
 
 	@Override
@@ -27,6 +43,7 @@ public class Rifle implements Arma {
 	@Override
 	public Arma recarregar(Integer municoes) {
 		this.municoes += municoes;
+		notificaObservadores();
 		return this;
 	}
 

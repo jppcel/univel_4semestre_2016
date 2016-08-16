@@ -1,8 +1,9 @@
 package br.univel.duelo.pistoleiro;
 
 import br.univel.duelo.arma.Arma;
+import br.univel.duelo.arma.ArmaObservador;
 
-public interface Pistoleiro {
+public interface Pistoleiro extends ArmaObservador {
 
 	Float atirar();
 
