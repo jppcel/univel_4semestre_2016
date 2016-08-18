@@ -4,6 +4,7 @@ import br.univel.duelo.arma.ArmaFactory;
 import br.univel.duelo.lojamunicao.LojaMunicao;
 import br.univel.duelo.pistoleiro.TipoPistoleiro;
 import br.univel.duelo.pistoleiro.br.PistoleiroBrFactory;
+import br.univel.duelo.policial.PoliciaPistoleiroFactory;
 
 public class Main {
 
@@ -13,7 +14,7 @@ public class Main {
 			.setTipo1(TipoPistoleiro.FORA_DA_LEI)
 			.setNome2("Puliça")
 			.setTipo2(TipoPistoleiro.DENTRO_DA_LEI)
-			.setPistoleiroFactory(new PistoleiroBrFactory())
+			.setPistoleiroFactory(new PoliciaPistoleiroFactory())
 			.setArmaFactory(new ArmaFactory())
 			.setLojaMunicao(LojaMunicao.getInstancia());
 		final Duelo duelo = builder.build();
