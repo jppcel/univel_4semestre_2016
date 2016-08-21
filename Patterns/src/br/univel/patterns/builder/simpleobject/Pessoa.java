@@ -1,5 +1,13 @@
 package br.univel.patterns.builder.simpleobject;
 
+/**
+ * Pessoa é uma classe com muitos parametros, sendo que poucos são obrigatorios,
+ * neste caso temos apenas um construtor, porém poderiamos ter varios, o que
+ * dificultaria ainda mais o entendimento de qual chamar
+ * 
+ * @author Will
+ *
+ */
 public class Pessoa {
 
 	private final String sobrenome;

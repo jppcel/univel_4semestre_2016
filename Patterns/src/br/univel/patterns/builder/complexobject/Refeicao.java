@@ -3,6 +3,12 @@ package br.univel.patterns.builder.complexobject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Representação da {@link Refeicao} em si, com todos os itens e preço total
+ * 
+ * @author Will
+ *
+ */
 public class Refeicao {
 
 	private List<Item> items = new ArrayList<Item>();

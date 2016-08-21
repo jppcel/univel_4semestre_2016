@@ -5,6 +5,14 @@ import br.univel.patterns.builder.complexobject.bebida.Pepsi;
 import br.univel.patterns.builder.complexobject.hamburger.HamburgerFrango;
 import br.univel.patterns.builder.complexobject.hamburger.HamburgerVegetariano;
 
+/**
+ * Possibilita a criação de um objeto complexo como uma refeição, que conta com
+ * um tipo de alimento e um tipo de bebida, porém com os builders esta
+ * construção fica simples
+ * 
+ * @author Will
+ *
+ */
 public class RefeicaoBuilder {
 
 	public Refeicao preparaRefeicaoVegetariana() {

@@ -4,6 +4,13 @@ import br.univel.patterns.abstractfactory.Pizza;
 import br.univel.patterns.abstractfactory.PizzaAbstractFactory;
 import br.univel.patterns.abstractfactory.TipoPizza;
 
+/**
+ * Fabrica concreta de pizza, do tipo brasil, dentro de cada abstract factory
+ * temos um factory method
+ * 
+ * @author Will
+ *
+ */
 public class PizzaFactoryUsa implements PizzaAbstractFactory {
 
 	@Override

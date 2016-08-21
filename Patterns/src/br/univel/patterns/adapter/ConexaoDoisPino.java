@@ -1,9 +1,19 @@
 package br.univel.patterns.adapter;
 
+/**
+ * Representa uma tomada que aceita conexão dos pinos apenas, e nada diferente
+ * disso
+ * 
+ * @author Will
+ *
+ */
 public class ConexaoDoisPino {
 
 	private Boolean conectado = false;
 
+	/**
+	 * Utilizado padrão singleton nesta tomada
+	 */
 	private static ConexaoDoisPino instancia;
 
 	private ConexaoDoisPino() {

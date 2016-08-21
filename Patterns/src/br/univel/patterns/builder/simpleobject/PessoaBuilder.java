@@ -1,5 +1,13 @@
 package br.univel.patterns.builder.simpleobject;
 
+/**
+ * Builder para criação de pessoa, este terá as mesmas variáveis que pessoa,
+ * porém é possivel ir setando estas e depois criar uma {@link Pessoa}, devido o
+ * uso de interface fluente fica mais fácil ainda a criação de objetos
+ * 
+ * @author Will
+ *
+ */
 public class PessoaBuilder {
 
 	private String sobrenome;
@@ -83,6 +91,11 @@ public class PessoaBuilder {
 		return this;
 	}
 
+	/**
+	 * Build é responsavel por criar a pessoa com o parametros que desejarmos
+	 * 
+	 * @return
+	 */
 	public Pessoa build() {
 		return new Pessoa(this.sobrenome, this.nome, this.cpf, this.rg, this.apelido, this.logradouro, this.cidade,
 				this.estado);

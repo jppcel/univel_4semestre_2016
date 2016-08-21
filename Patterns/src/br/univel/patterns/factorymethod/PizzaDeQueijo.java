@@ -1,5 +1,8 @@
 package br.univel.patterns.factorymethod;
 
+/**
+ * {@link PizzaDeQueijo} é uma das pizzas disponíveis no nosso sistema
+ */
 class PizzaDeQueijo implements Pizza {
 
 	private final String nome;
