@@ -17,6 +17,8 @@ public class TelaControllerImpl implements TelaController {
 
 	@Override
 	public void show(final String id) {
+		// Posso adicionar validações aqui
+		System.out.println(String.format("Abrindo a tela %s", id));
 		this.card.show(this.panel, id);
 	}
 
