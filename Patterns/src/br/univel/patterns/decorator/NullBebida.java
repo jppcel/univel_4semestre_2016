@@ -2,6 +2,10 @@ package br.univel.patterns.decorator;
 
 import java.math.BigDecimal;
 
+
+
+
+
 public class NullBebida implements Bebida {
 
 	@Override
