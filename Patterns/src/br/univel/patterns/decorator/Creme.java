@@ -3,6 +3,12 @@ package br.univel.patterns.decorator;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+/**
+ * Possibilita a combinação com outras bebidas por usar o padrão decorator
+ * 
+ * @author wcsantos
+ *
+ */
 public class Creme implements Bebida {
 
 	private final Bebida bebida;

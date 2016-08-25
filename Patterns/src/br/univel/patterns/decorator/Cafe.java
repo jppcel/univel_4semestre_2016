@@ -2,6 +2,12 @@ package br.univel.patterns.decorator;
 
 import java.math.BigDecimal;
 
+/**
+ * Bebida base para criarmos as nossas combinações
+ * 
+ * @author wcsantos
+ *
+ */
 public class Cafe implements Bebida {
 
 	@Override
